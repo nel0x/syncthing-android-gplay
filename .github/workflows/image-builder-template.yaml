@@ -12,7 +12,7 @@ on:
 
 env:
   # template var
-  image: ghcr.io/catfriend1/syncthing-android-builder
+  image: ghcr.io/nel0x/syncthing-android-builder
 
 jobs:
   build-image:
@@ -33,7 +33,7 @@ jobs:
         if: ${{ inputs.push }}
         with:
           registry: ghcr.io
-          username: catfriend1
+          username: nel0x
           password: ${{ secrets.GHCR_TOKEN }}
 
       - uses: docker/build-push-action@v4

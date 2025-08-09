@@ -17,7 +17,7 @@ jobs:
   release:
     name: Release Build and Publish
     runs-on: ubuntu-latest
-    container: ghcr.io/catfriend1/syncthing-android-builder
+    container: ghcr.io/nel0x/syncthing-android-builder
     steps:
       - uses: actions/checkout@v4
         with:
