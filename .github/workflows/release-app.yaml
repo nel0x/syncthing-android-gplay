@@ -12,6 +12,10 @@ on:
       - 'v[0-9]+.[0-9]+.[0-9]+.[0-9]+'
       - 'v[0-9]+.[0-9]+.[0-9]+-rc\.[0-9]+'
       - 'v[0-9]+.[0-9]+.[0-9]+-rc\.[0-9]+\.[0-9]+'
+      - 'v[0-9]+.[0-9]+.[0-9]+-gplay'
+      - 'v[0-9]+.[0-9]+.[0-9]+.[0-9]+-gplay'
+      - 'v[0-9]+.[0-9]+.[0-9]+-rc\.[0-9]+-gplay'
+      - 'v[0-9]+.[0-9]+.[0-9]+-rc\.[0-9]+\.[0-9]+-gplay'
 
 jobs:
   release:
@@ -73,8 +77,6 @@ jobs:
           mv "app/build/outputs/bundle/gplay/app-gplay.aab" "app/build/outputs/bundle/gplay/com.github.catfriend1.syncthingandroid_gplay_v${{ env.VERSION }}_${{ env.COMMIT_HASH }}.aab"
           #
           cd "app/build/outputs/apk/release"
-          echo '${{ secrets.GNUPG_SIGNING_KEY_BASE64 }}' | base64 -d | gpg --import
-          sha256sum "com.github.catfriend1.syncthingandroid_release_v${{ env.VERSION }}_${{ env.COMMIT_HASH }}.apk" | gpg --clearsign > sha256sum.txt.asc
 
       - uses: ncipollo/release-action@v1
         with:
