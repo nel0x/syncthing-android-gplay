@@ -357,7 +357,6 @@ public class ConfigXml {
         // Disable "startBrowser" because it applies to desktop environments and cannot start a mobile browser app.
         Options defaultOptions = new Options();
         changed = setConfigElement(options, "startBrowser", defaultOptions.startBrowser) || changed;
-        changed = setConfigElement(options, "databaseTuning", defaultOptions.databaseTuning) || changed;
 
         /**
          * Disable Syncthing's NAT feature because it causes kernel oops on some buggy kernels.
@@ -1009,7 +1008,6 @@ public class ConfigXml {
             return gui;
         }
 
-        gui.debugging = getAttributeOrDefault(elementGui, "debugging", gui.debugging);
         gui.enabled = getAttributeOrDefault(elementGui, "enabled", gui.enabled);
         gui.useTLS = getAttributeOrDefault(elementGui, "tls", gui.useTLS);
 
@@ -1031,7 +1029,6 @@ public class ConfigXml {
             return;
         }
 
-        elementGui.setAttribute("debugging", Boolean.toString(gui.debugging));
         elementGui.setAttribute("enabled", Boolean.toString(gui.enabled));
         elementGui.setAttribute("tls", Boolean.toString(gui.useTLS));
 
@@ -1104,7 +1101,6 @@ public class ConfigXml {
         options.stunKeepaliveStartS = getContentOrDefault(elementOptions.getElementsByTagName("stunKeepaliveStartS").item(0), options.stunKeepaliveStartS);
         options.stunKeepaliveMinS = getContentOrDefault(elementOptions.getElementsByTagName("stunKeepaliveMinS").item(0), options.stunKeepaliveMinS);
         options.stunServer = getContentOrDefault(elementOptions.getElementsByTagName("stunServer").item(0), options.stunServer);
-        options.databaseTuning = getContentOrDefault(elementOptions.getElementsByTagName("databaseTuning").item(0), options.databaseTuning);
         options.maxConcurrentIncomingRequestKiB = getContentOrDefault(elementOptions.getElementsByTagName("maxConcurrentIncomingRequestKiB").item(0), options.maxConcurrentIncomingRequestKiB);
         options.announceLanAddresses = getContentOrDefault(elementOptions.getElementsByTagName("announceLANAddresses").item(0), options.announceLanAddresses);
         options.sendFullIndexOnUpgrade = getContentOrDefault(elementOptions.getElementsByTagName("sendFullIndexOnUpgrade").item(0), options.sendFullIndexOnUpgrade);
