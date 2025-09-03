@@ -41,6 +41,7 @@ task buildNative(type: PythonTask) {
     environment "SOURCE_DATE_EPOCH", getSourceDateEpoch()
     environment "BUILD_HOST", "nel0x-syncthing-android-gplay"
     environment "BUILD_USER", "reproducible-build"
+    environment "STTRACE", ""
 
     verifySyncthingNativeVersionMatchesApp();
 
