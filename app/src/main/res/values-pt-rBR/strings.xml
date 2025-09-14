@@ -112,7 +112,7 @@
     <string name="no_devices_configured">Nenhum dispositivo configurado. \nComece adicionando um dispositivo agora.</string>
     <string name="deviceEncryptionPasswordHint">Se não for confiável, digite a senha de criptografia</string>
     <!-- Indicates that a folder is fully synced to the local device -->
-    <string name="device_up_to_date">Atualizada</string>
+    <string name="device_up_to_date">Atualizado</string>
     <!-- Indicates that the device is currently syncing. Parameter is sync percentage -->
     <string name="device_syncing">Sincronizando (%1$d%%)</string>
     <string name="device_syncing_percent_bytes">Sincronizando (%1$d%%, %2$s)</string>
@@ -508,7 +508,7 @@
     <string name="transfer_rate_unit_MiB_s">MiB/s</string>
     <string name="transfer_rate_unit_GiB_s">GiB/s</string>
     <string name="transfer_rate_unit_TiB_s">TiB/s</string>
-    <string name="state_up_to_date">Atualizado</string>
+    <string name="state_up_to_date">Atualizada</string>
     <string name="state_clean_waiting">Esperando para limpar</string>
     <string name="state_scanning">Verificando</string>
     <string name="state_scan_waiting">Esperando para verificar</string>
@@ -562,7 +562,7 @@
     <string name="trashcan_versioning_description">Os arquivos são movidos para o diretório .stversions quando substituídos ou apagados pelo Syncthing.</string>
     <string name="maximum_age_description">O tempo máximo para manter uma versão (em dias, use 0 para manter as versões para sempre).</string>
     <string name="versions_path_description">Caminho do diretório onde as versões são salvas (deixe em branco para que seja o diretório padrão .stversions dentro da pasta compartilhada).</string>
-    <string name="cleanout_after_description">O número de dias em que são mantidos os arquivos da lixeira. Zero significa para sempre</string>
+    <string name="cleanout_after_description">O número de dias em que são mantidos os arquivos na lixeira. Zero significa para sempre</string>
     <string name="external_versioning_description">O primeiro argumento da linha de comando é o caminho da pasta e o segundo é o caminho relativo à pasta.</string>
     <string name="no_versioning_description">Selecione um tipo de versionamento para ativá-lo.</string>
     <!-- Displays the current file versioning type in the Folder activity -->
@@ -729,4 +729,12 @@
     <string name="qs_schedule_label_minutes" tools:ignore="PluralsCandidate">Executar por %1$d minutos</string>
     <string name="broadcast_service_control_title">Controle do serviço por transmissão</string>
     <string name="reason_run_condition_monitor_not_instantiated">O RunConditionMonitor não foi instanciado. Por favor, reinicie o app e abra um relatório de bug se este erro não desaparecer depois de um reinício.</string>
+    <string name="important_news_title">Notícias importantes - Ação necessária</string>
+    <string name="important_news_description">Leia o nosso comunicado para continuar tendo uma experiência boa com o app em %1$s</string>
+    <string name="important_news_action_open">Abrir no navegador</string>
+    <string name="important_news_action_remind">Lembre-me depois</string>
+    <string name="important_news_action_no_remind">Ignorar por enquanto</string>
+    <string name="important_news_action_view_options">VER OPÇÕES</string>
+    <string name="backup_password_set_masked">✅ Definir senha - Toque para alterar</string>
+    <string name="toggle_password_visibility">Exibir/ocultar senha</string>
 </resources>

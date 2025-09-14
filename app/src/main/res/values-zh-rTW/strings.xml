@@ -344,7 +344,7 @@
     <string name="could_not_access_deviceid">無法存取裝置識別碼</string>
     <string name="browse">瀏覽</string>
     <string name="no_sub_folder_is_selected">無子資料夾被選擇</string>
-    <string name="share_device_id_chooser">分享裝置識別代碼</string>
+    <string name="share_device_id_chooser">分享裝置識別碼給</string>
     <string name="custom_sync_conditions_title">自訂同步條件</string>
     <string name="notification_permission_title">通知權限</string>
     <string name="notification_permission_desc">顯示「新裝置連線請求」、「資料夾共享通知」等通知訊息，以及確保背景服務維持啟動且與其他裝置保持連線。</string>
@@ -375,4 +375,8 @@
     <string name="syncthing_starting">Syncthing 正在啟動。</string>
     <string name="syncthing_running">Syncthing 執行中。</string>
     <string name="dialog_exit_while_running_as_service_title">確認退出應用程式</string>
+    <string name="privacy_title">隱私權政策</string>
+    <string name="open_source_licenses_title">開放原始碼授權</string>
+    <string name="open_source_licenses_summary">顯示被使用的開放原始碼授權</string>
+    <string name="exception_known_bug_notice">遇到了尚未解決的已知錯誤。查看 %1$s/%2$s 以獲得更多資訊。請精準描述錯誤發生前的情況。</string>
 </resources>

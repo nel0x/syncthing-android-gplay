@@ -36,18 +36,22 @@ dependencies {
 }
 
 android {
-    val ndkVersionShared = rootProject.extra.get("ndkVersionShared")
-
     compileSdk = libs.versions.compile.sdk.get().toInt()
     namespace = "com.nutomic.syncthingandroid"
-    ndkVersion = "${ndkVersionShared}"
+    ndkVersion = libs.versions.ndk.version.get()
+
+    externalNativeBuild {
+        ndkBuild {
+            path = file("src/main/cpp/libSyncthingNative.mk")
+        }
+    }
 
     buildFeatures {
         compose = true
     }
 
     defaultConfig {
-        applicationId = "com.github.catfriend1.syncthingandroid"
+        applicationId = "com.github.catfriend1.syncthingfork"
         minSdk = libs.versions.min.sdk.get().toInt()
         targetSdk = libs.versions.target.sdk.get().toInt()
         versionCode = libs.versions.version.code.get().toInt()
@@ -75,9 +79,6 @@ android {
             signingConfig = signingConfigs.runCatching { getByName("release") }
                 .getOrNull()
                 .takeIf { it?.storeFile != null }
-        }
-        create("gplay") {
-            initWith(getByName("release"))
         }
     }
 
