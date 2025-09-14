@@ -4,6 +4,7 @@
     <!-- We don't care about incomplete translations. -->
     <issue id="MissingTranslation" severity="ignore" />
     <!-- Ignore notices about updating gradle dependencies -->
+    <issue id="AndroidGradlePluginVersion" severity="ignore" />
     <issue id="GradleDependency" severity="ignore" />
     <!-- Ignore "Value overridden by Gradle build script" for app
     version (which is actually read from manifest by gradle). -->
@@ -12,12 +13,10 @@
     but we don't care or use alternative attributes for these
     platforms -->
     <issue id="UnusedAttribute" severity="ignore" />
-    <!-- We don't care about Google App Indexing -->
-    <issue id="GoogleAppIndexingWarning" severity="ignore" />
     <issue id="ProtectedPermissions" severity="ignore" />
     <!-- Disabling battery optimizations is optional, so this warning doesn't apply to us -->
     <issue id="BatteryLife" severity="ignore" />
-    <!-- Disable warning about scoped storage gplay policies -->
+    <!-- Disable warning about scoped storage policies -->
     <issue id="ScopedStorage" severity="ignore" />
     <!-- Disable notice about custom x509 certificate trust manager -->
     <issue id="CustomX509TrustManager" severity="ignore" />
