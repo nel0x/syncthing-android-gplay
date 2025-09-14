@@ -82,7 +82,7 @@ android {
         }
         create("gplay") {
             initWith(getByName("release"))
-        }       
+        }
     }
 
     compileOptions {
