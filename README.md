@@ -15,19 +15,7 @@ It regularly mirrors the <a href="https://github.com/Catfriend1/syncthing-androi
 
 ## Switching from the (now deprecated) official version
 
-Switching is easier than you may think!
-
-- On Syncthing on the official app, go into the settings and create a backup.
-- Confirm you can see that backup in your files.
-- Now stop the official app entirely using the system app settings for Syncthing (force stop the app basically - we need to ensure it's not running).
-- Install Syncthing-Fork [v1.29.7.1](https://github.com/Catfriend1/syncthing-android/releases/tag/v1.29.7.1)
-- Now start Syncthing-Fork.
-- In the Syncthing-Fork settings, restore the backup you created earlier.
-- Like magic, everything should be as it was in Syncthing official.
-- Confirm everything looks good.
-- Uninstall the official Syncthing app.
-- Delete the syncthing configuration backup from `backups/syncthing`.
-- Upgrade to the [latest Syncthing-Fork version](https://github.com/Catfriend1/syncthing-android/releases/latest)
+Switching is easier than you may think! See our [wiki article](https://github.com/Catfriend1/syncthing-android/blob/main/wiki/Switching-from-the-deprecated-official-version.md) for detailed instructions.
 
 ## Wiki and Useful Articles
 

@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.android.application)
     alias(libs.plugins.aboutLibraries)
+    alias(libs.plugins.android.application)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
@@ -105,6 +105,16 @@ android {
         }
         abi {
             enableSplit = true
+        }
+    }
+
+    splits {
+        abi {
+            // Only enable splits for release builds
+            isEnable = project.gradle.startParameter.taskNames.any { it.contains("Release", ignoreCase = true) }
+            reset()
+            include("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+            isUniversalApk = true
         }
     }
 
