@@ -54,7 +54,6 @@ public class FolderPickerActivity extends SyncthingActivity
     /**
      * If requested by {@link #createIntent}, we'll only use one root dir and enforce
      * the user stays within that. {@link #populateRoots} will respect this extra.
-     * See issue #366.
      */
     private static final String EXTRA_ROOT_DIRECTORY =
             ".activities.FolderPickerActivity.ROOT_DIRECTORY";
@@ -99,7 +98,6 @@ public class FolderPickerActivity extends SyncthingActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((SyncthingApp) getApplication()).component().inject(this);
 
         setContentView(R.layout.activity_folder_picker);
         mCurrentPath = findViewById(R.id.currentPath);
