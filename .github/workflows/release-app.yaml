@@ -117,7 +117,7 @@ jobs:
           unset ANDROID_NDK_HOME
           echo '${{ secrets.SIGNING_KEYSTORE_JKS_BASE64 }}' | base64 -d > "$SYNCTHING_RELEASE_STORE_FILE"
           java -version
-          ./gradlew --no-daemon buildNative lintRelease assembleRelease bundlegplay
+          ./gradlew --no-daemon buildNative lintRelease assembleRelease bundlerelease
           rm "$SYNCTHING_RELEASE_STORE_FILE"
 
       - name: prepare-artifacts
@@ -125,14 +125,14 @@ jobs:
         run: |
           set -eu
           #
-          cd "app/build/outputs/apk/release"
-          mv "app/build/outputs/apk/release/app-release.apk" "app/build/outputs/apk/release/${{ env.APPLICATION_ID }}_release_v${{ env.VERSION }}_${{ env.COMMIT_HASH }}.apk"
-          mv "app/build/outputs/bundle/gplay/app-gplay.aab" "app/build/outputs/bundle/gplay/${{ env.APPLICATION_ID }}_gplay_v${{ env.VERSION }}_${{ env.COMMIT_HASH }}.aab"
+          cd "app/build/outputs"
+          mv "apk/release/app-release.apk" "apk/release/${{ env.APPLICATION_ID }}_release_v${{ env.VERSION }}_${{ env.COMMIT_HASH }}.apk"
+          mv "bundle/release/app-release.aab" "bundle/release/${{ env.APPLICATION_ID }}_gplay_v${{ env.VERSION }}_${{ env.COMMIT_HASH }}.aab"
           #
 
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "app/build/outputs/apk/release/*.apk,app/build/outputs/bundle/gplay/*.aab"
+          artifacts: "app/build/outputs/apk/release/*.apk,app/build/outputs/bundle/release/*.aab"
           artifactErrorsFailBuild: true
           name: Syncthing-Fork v${{ env.VERSION }}
           bodyFile: "app/src/main/play/release-notes/en-US/default.txt"
