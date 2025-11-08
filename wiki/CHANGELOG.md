@@ -1,3 +1,70 @@
+
+---
+
+## Syncthing-Fork v2.0.10.2 (2025-10-16)
+
+## What's Changed
+### Features
+Add pref to allow overwrite existing files when another app shares to our app (#1704)
+
+---
+
+## Syncthing-Fork v2.0.10.1 (2025-09-29)
+
+## What's Changed
+### Features
+Add floating exit button, for one-shot sync users (#1659)
+Remove redundant buttons from device edit dialog (#1662)
+
+---
+
+## Syncthing-Fork v2.0.10.0 (2025-09-24)
+
+## What's Changed
+### Features
+* fix(dagger): Replace circular dependency  in NotificationHandler #1658
+
+---
+
+## Syncthing-Fork v2.0.9.2 (2025-09-22)
+
+This version supports v1 config import from the deprecated Syncthing official app.
+
+---
+
+## Syncthing-Fork v2.0.9.0 (2025-09-13)
+
+## What's Changed
+### Fixes
+* SyncthingNative now takes care of cleaning up the old index-v1 database after migration to v2 (instead of the wrapper)
+
+---
+
+## Syncthing-Fork v2.0.8.1 (2025-09-09)
+
+## What's Changed
+### Fixes
+* SyncthingService/exportConfig: Overwrite existing zip instead of appending files #1618
+### Features
+* Show QR code for existing paired device #1619
+* SyncthingRunnable: Cleanup index-v0.14.0.db-migrated if dir exists #1622
+* Settings: Add eye toggle to show/hide the import/export password #1621
+
+---
+
+## Syncthing-Fork v2.0.8.0 (2025-09-08)
+
+---
+
+## Syncthing-Fork v2.0.7.0 (2025-09-05)
+
+## What's Changed
+### Fixes
+* NAT PMP permission denied by Android 14+ (#1514)
+* Local discovery denied by Android 10+ (#1500)
+
+---
+
 ## Syncthing-Fork v1.30.0.3 (2025-08-07)
 
 ## What's Changed
@@ -48,7 +115,7 @@ Updated dependencies, build using Java 21. Functionally the same as v1.30.0.1. R
 ---
 
 ## Syncthing-Fork v1.29.7.4 F-Droid (2025-06-27)
-recreated release tag; functionally the same as v1.29.7.3 with changes to support F-Droid's reproducible builds.
+Functionally the same as v1.29.7.3 with changes to support F-Droid's reproducible builds.
 
 ---
 
@@ -57,21 +124,6 @@ recreated release tag; functionally the same as v1.29.7.3 with changes to suppor
 ## What's Changed
 * Disable android backup integration by @Catfriend1 in #1470
 * After folders complete, run additional workloads in a seperate thread by @Catfriend1 in #1471
-
-⚠️ Breaking change:
-The config import and export feature now reads or writes the file "(InternalStorage)/backups/syncthing/config.zip". This file can be encrypted by a user-defined password to protect sensitive parts of your Syncthing configuration like, for example, device trust and which data you share with other devices. The change makes it harder for a bad actor to gain unauthorized access to your files using stolen config exports.
-
-ℹ️ Action required:
-- Please go to "Settings - Import and Export"
-- Set an individual password, be sure to remember it
-- Click "Export Configuration" and confirm
-- Open your file manager, e.g. Material Files
-- Browse to "(InternalStorage)/backups/syncthing"
-- Delete all "*.pem", "*.xml" files because they contain an outdated and unencrypted config from prior exports.
-
-⚡If you'd like to import an old and unencrypted config consisting of multiple files instead of the zip archive, please follow [these steps](https://github.com/Catfriend1/syncthing-android?tab=readme-ov-file#switching-from-the-now-deprecated-official-version).
-
-🤷‍♂️ Problems upgrading? See release notes of v1.29.6.5.
 
 ---
 
@@ -88,7 +140,7 @@ The config import and export feature now reads or writes the file "(InternalStor
 - Browse to "(InternalStorage)/backups/syncthing"
 - Delete all ".pem", ".xml" files because they contain an outdated and unencrypted config from prior exports.
 
-⚡If you'd like to import an old and unencrypted config consisting of multiple files instead of the zip archive, please follow [these steps](https://github.com/Catfriend1/syncthing-android?tab=readme-ov-file#switching-from-the-now-deprecated-official-version).
+⚡If you'd like to import an old and unencrypted config consisting of multiple files instead of the zip archive, please follow [these steps](migration/Switching-from-the-deprecated-official-version.md).
 
 🤷‍♂️ Problems upgrading? See release notes of v1.29.6.5.
 
@@ -140,7 +192,7 @@ What's Changed:
 * Complete the welcome slides
 * Slide out the menu > Import and Export > Import config
 
-🤷‍♂️ Still problems? Find more help on the [wiki article](https://github.com/Catfriend1/syncthing-android/blob/main/wiki/Install-or-upgrade-failed-troubleshooting.md)
+🤷‍♂️ Still problems? Find more help on the [wiki article](known-bug-workarounds/Install-or-upgrade-failed.md)
 
 ## What's Changed
 * Fixed INSTALL_FAILED_DUPLICATE_PERMISSION (#1443) by @Catfriend1

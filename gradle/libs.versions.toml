@@ -7,26 +7,26 @@ ndk-version = "28.2.13676358"
 target-sdk = "36"
 
 # App version
-version-code = "2001001"
-version-name = "2.0.10.1"
+version-code = "2001101"
+version-name = "2.0.11.1"
 
-aboutLibraries = "12.2.4"
+aboutLibraries = "13.1.0"
 activity = "1.11.0"
 android-material = "1.13.0"
 android-gradle-plugin = "8.11.1"
-compose-material3 = "1.3.2"
+compose-material3 = "1.4.0"
 compose-material-icons = "1.7.8"
-compose-ui = "1.9.1"
+compose-ui = "1.9.4"
 constraintlayout = "2.2.1"
 core-ktx = "1.17.0"
-dagger = "2.57.1"
+dagger = "2.57.2"
 documentfile = "1.1.0"
 fragment-ktx = "1.8.9"
 gson = "2.13.2"
 guava = "33.5.0-android"
 jbcrypt = "0.4"
-kotlin = "2.2.20"
-ksp = "2.2.20-2.0.3"
+kotlin = "2.2.21"
+ksp = "2.3.0"
 libsuperuser = "1.1.1"
 lingala-zip4j = "2.11.5"
 localbroadcastmanager = "1.1.0"
@@ -68,7 +68,7 @@ zxing-android-embedded = { module = "com.journeyapps:zxing-android-embedded", ve
 zxing-core = { module = "com.google.zxing:core", version.ref = "zxing-core" }
 
 [plugins]
-aboutLibraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "aboutLibraries" }
+aboutLibraries = { id = "com.mikepenz.aboutlibraries.plugin.android", version.ref = "aboutLibraries" }
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

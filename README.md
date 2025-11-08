@@ -15,17 +15,17 @@ It regularly mirrors the <a href="https://github.com/Catfriend1/syncthing-androi
 
 ## Switching from the (now deprecated) official version
 
-Switching is easier than you may think! See our [wiki article](https://github.com/Catfriend1/syncthing-android/blob/main/wiki/Switching-from-the-deprecated-official-version.md) for detailed instructions.
+Switching is easier than you may think! See our [wiki article](wiki/migration/Switching-from-the-deprecated-official-version.md) for detailed instructions.
 
 ## Wiki and Useful Articles
 
-Our knowledge base is published [here](https://github.com/Catfriend1/syncthing-android/tree/main/wiki#readme).
+Our knowledge base is published [here](wiki#readme).
 
-Our [release history and changelog](https://github.com/Catfriend1/syncthing-android/blob/main/wiki/CHANGELOG.md) can be found on the wiki.
+Our [release history and changelog](wiki/CHANGELOG.md) can be found on the wiki.
 
 ## Building and Development Notes
 
-See [detailed info](https://github.com/Catfriend1/syncthing-android/blob/main/wiki/Building-and-Development.md).
+See [detailed info](wiki/developers/Building-and-Development.md).
 
 ## Acknowledgments
 
@@ -38,7 +38,7 @@ Special thanks to the former maintainers:
 
 ## Privacy Policy
 
-See our document on privacy: [privacy-policy.md](https://github.com/Catfriend1/syncthing-android/blob/main/privacy-policy.md).
+See our document on privacy: [privacy-policy.md](privacy-policy.md).
 
 ## License
 
